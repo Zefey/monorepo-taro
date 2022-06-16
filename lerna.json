@@ -1,0 +1,10 @@
+{
+  "packages": [
+    "packages/*",
+    "packages/project/*",
+    "packages/components/*",
+    "packages/pages/*",
+    "packages/plugin/*"
+  ],
+  "version": "0.0.0"
+}

@@ -1,0 +1,17 @@
+{
+  "name": "taro-monorepo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "packages/project/*",
+    "packages/components/*",
+    "packages/pages/*",
+    "packages/plugin/*"
+  ],
+  "devDependencies": {
+    "lerna": "^5.1.2"
+  }
+}
