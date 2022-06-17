@@ -20,3 +20,36 @@ Taro路由是封装原生小程序的  原生小程序本身只支持绝对路�
 ## 问题3. 客制化的思考
 
 通用组件、通用模块 + 客制化Taro项目 = 不同小程序
+
+
+
+
+
+**关于分包**
+
+```
+{
+  "pages": [
+    "pages/index",
+    "pages/logs"
+  ],
+  "subpackages": [
+    {
+      "root": "moduleA",
+      "pages": [
+        "pages/rabbit",
+        "pages/squirrel"
+      ]
+    }, {
+      "root": "moduleB",
+      "pages": [
+        "pages/pear",
+        "pages/pineapple"
+      ],
+      "independent": true
+    }
+  ]
+}
+```
+
+根据 `项目src/app.config.ts` 导入 `packages/pages` 目录下共用的页面 写到 `项目/src/pages`.

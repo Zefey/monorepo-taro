@@ -1,3 +1,5 @@
+import path from 'path'
+
 const config = {
   projectName: 'demo1',
   date: '2022-6-15',
@@ -10,12 +12,9 @@ const config = {
   sourceRoot: 'src',
   outputRoot: 'dist',
   plugins: [
-    ['comp-to-page',{}],
-    ['taro-plugin-auto-pages',
-        {
-            indexPath: 'pages/index/index'
-        }
-    ],
+    ['comp-to-page',{
+      configPath: path.join(__dirname,'../src/app.page.js')
+    }],
   ],
   defineConstants: {
   },
